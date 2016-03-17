@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>KnockoutJS loading example</title>
+        <style>
+            /* From http://projects.lukehaas.me/css-loaders/ */
+            .loader {
+                width: 8em;
+                height: 8em;
+                box-sizing: border-box;
+                border-radius: 50%;
+                position: relative;
+                border: 1.1em solid #eee;
+                border-left: 1.1em solid #999;
+                -webkit-transform: translateZ(0);
+                -ms-transform: translateZ(0);
+                transform: translateZ(0);
+                -webkit-animation: spinner 1.1s infinite linear;
+                animation: spinner 1.1s infinite linear;
+            }
+            @-webkit-keyframes spinner {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+                100% {
+                    -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+            @keyframes spinner {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+                100% {
+                    -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+            .hide {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>KnockoutJS loading example</h1>
+        <!-- ko if: false -->
+            <div class="loader"></div>
+        <!-- /ko -->
+        <div data-bind="css: { hide: false }" class="hide">
+            <span data-bind="text: message"></span>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+        <script>
+            (function() {
+
+                var model = {
+
+                    message: ko.observable('Hello World!')
+                };
+
+                setTimeout(function() {
+
+                    ko.applyBindings(model);
+
+                }, 1000);
+
+            })();
+        </script>
+    </body>
+</html>
