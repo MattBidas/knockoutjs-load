@@ -5,6 +5,8 @@ KnockoutJS template).
 
 ## How it works
 
+Page loading flow:
+
  * Browser loads page up to the spinner
  * Browser displays the spinner
  * Browser loads rest of page, including scripts
