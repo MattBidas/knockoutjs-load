@@ -41,10 +41,12 @@ the class is removed:
 The class is automatically removed when bindings are applied by
 `ko.applyBindings`. This is achieved through the built-in `css` binding.
 
+CSS spinner code was taken from <http://projects.lukehaas.me/css-loaders/>.
+
 ## Demo
 
 Visit <http://demos.rlaanemets.com/knockoutjs-load/>.
 
 ## License
 
-Public domain.
+The MIT License.
